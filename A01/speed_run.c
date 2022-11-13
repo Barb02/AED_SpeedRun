@@ -70,6 +70,7 @@ solution_t;
 //
 // the (very inefficient) recursive solution given to the students
 //
+//
 
 static solution_t solution_1,solution_1_best, solution_2,solution_2_best, solution_3,solution_3_best;
 static double solution_1_elapsed_time, solution_2_elapsed_time, solution_3_elapsed_time; // time it took to solve the problem
