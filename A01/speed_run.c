@@ -243,9 +243,9 @@ static void solution_4_checkSpeedLimit(int final_position)
   int move_number = 0;
   solution_4_best.positions[move_number] = position;
   while(position < final_position){
-    solution_4_count++;
     move_number++;
     for(new_speed = speed+1;new_speed >= speed-1;new_speed--){
+        solution_4_count++;
       if(checkSpeedLimit(new_speed,check_quantaty[new_speed],position,final_position)){
         position = position + new_speed;
         speed = new_speed;
@@ -300,7 +300,7 @@ static void example(void)
 
 int main(int argc,char *argv[argc + 1])
 {
-# define _time_limit_  3600.0
+# define _time_limit_  1.0
   int n_mec,final_position,print_this_one;
   char file_name[64];
 
@@ -328,7 +328,7 @@ int main(int argc,char *argv[argc + 1])
     printf("%3d |",final_position);
 
     // first solution method (very bad)
-    /* if(solution_1_elapsed_time < _time_limit_)
+    if(solution_1_elapsed_time < _time_limit_)
     {
       solve_1(final_position);
       if(print_this_one != 0)
@@ -342,10 +342,10 @@ int main(int argc,char *argv[argc + 1])
     {
       solution_1_best.n_moves = -1;
       printf("                                |");
-    } */
+    }
 
     // second solution method (less bad)
-    /* if(solution_2_elapsed_time < _time_limit_)
+    if(solution_2_elapsed_time < _time_limit_)
     {
       solve_2(final_position);
       if(print_this_one != 0)
@@ -359,7 +359,7 @@ int main(int argc,char *argv[argc + 1])
     {
       solution_2_best.n_moves = -1;
       printf("                                |");
-    } */
+    }
 
     // third solution method
     if(solution_3_elapsed_time < _time_limit_)
