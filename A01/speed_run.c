@@ -221,8 +221,8 @@ static void solve_3(int final_position)
 static int checkSpeedLimit(int speed,int check_size,int current_pos,int road_size){
   int check_speed = speed;
   int counter = speed+1;
+  if(check_size+current_pos > road_size) return 0;
   for(int i= 0; i<check_size+1;i++){
-    if(check_size+current_pos > road_size) return 0;
     if(max_road_speed[current_pos+i] < check_speed){
       return 0;
     }
@@ -300,7 +300,7 @@ static void example(void)
 
 int main(int argc,char *argv[argc + 1])
 {
-# define _time_limit_  3600.0
+# define _time_limit_  1.0
   int n_mec,final_position,print_this_one;
   char file_name[64];
 
