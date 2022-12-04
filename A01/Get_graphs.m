@@ -1,10 +1,13 @@
 load("table_values.mat")
-sol1_t = readtable("sol1_55.txt");
+%sol1_t = readtable("sol1_55_109018.txt");
+sol1_t = readtable("sol1_55_105937.txt");
 
 %escolhe a tabela que queres tabalhar testes109018 ou testes105938
 table = testes109018;
-n1 = 1:51;
+n1 = 1:50;
+n1 = [n1 55];
 nt = (1:1:100);
+n = table2array(testes109018(:,1));
 %arrays sol_1
 n_moves_1 = table2array(sol1_t([1:51],3));
 efford_1 = table2array(sol1_t([1:51],4));
