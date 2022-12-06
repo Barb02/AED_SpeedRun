@@ -1,6 +1,6 @@
 %% Student Number 109018
 load("table_values.mat")
-sol1_t = readtable("sol1_55.txt");
+sol1_t = readtable("sol1_55_109018.txt");
 
 %% Student Number 105937
 load("table_values.mat")
