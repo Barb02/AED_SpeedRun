@@ -89,24 +89,17 @@ xlabel("Posição final")
 ylabel("Tempo de execução (s)")
 %% all times
 figure(5)
-plot(n1,log(times_109018_1),"-o");
+semilogy(n1,times_109018_1,"-o");
 hold on;
-plot(n2,log(times_109018_2),"-o");
-plot(n2,log(times_109018_3),"-o");
-plot(n2,log(times_109018_4),"-o");
-plot(n1,log(times_105937_1),"-x")
-plot(n2,log(times_105937_2),"-x")
-plot(n2,log(times_105937_3),"-x")
-plot(n2,log(times_105937_4),"-x")
+semilogy(n2,times_109018_2,"-o");
+semilogy(n2,times_109018_3,"-o");
+semilogy(n2,times_109018_4,"-o");
+semilogy(n1,times_105937_1,"-x")
+semilogy(n2,times_105937_2,"-x")
+semilogy(n2,times_105937_3,"-x")
+semilogy(n2,times_105937_4,"-x")
 legend("109018_1","109018_2","109018_3","109018_4","105937_1","105937_2","105937_3","105937_4")
-%% all times without slow
-figure(6)
-plot(n2,log(times_109018_2),"-o");
-hold on;
-plot(n2,log(times_109018_3),"-o");
-plot(n2,log(times_109018_4),"-o");
-plot(n2,log(times_105937_2),"-x")
-plot(n2,log(times_105937_3),"-x")
-plot(n2,log(times_105937_4),"-x")
-legend("109018_2","109018_3","109018_4","105937_2","105937_3","105937_4")
+title("Comparação de tempo dos vários métodos ")
+xlabel("Posição final")
+ylabel("Tempo de execução (s)")
 
