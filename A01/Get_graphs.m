@@ -93,7 +93,7 @@ plot(n2,efford_109018_4,"-o");
 hold on
 plot(n2,efford_105937_4,"-x")
 legend("109018","105937")
-title("Recursion 4-efford")
+title("Check Speed limit-efford")
 xlabel("Posição final")
 ylabel("Efford")
 figure(42)
