@@ -189,8 +189,10 @@ static void solution_3_recursion(int move_number,int position,int speed,int fina
     }
     return;
   }
-  // no, try all legal speeds
+  
+  // was the best solution ahead of me in the same ammount of moves? 
   if(solution_3_best.positions[move_number] > solution_3.positions[move_number]) return;
+  // no, try all legal speeds
   for(new_speed = speed + 1; new_speed >= speed - 1; new_speed--)
     if(new_speed >= 1 && new_speed <= _max_road_speed_ && position + new_speed <= final_position)
     {
@@ -300,7 +302,7 @@ static void example(void)
 
 int main(int argc,char *argv[argc + 1])
 {
-# define _time_limit_  1.0
+# define _time_limit_  5.0
   int n_mec,final_position,print_this_one;
   char file_name[64];
 
@@ -351,7 +353,7 @@ int main(int argc,char *argv[argc + 1])
       if(print_this_one != 0)
       {
         sprintf(file_name,"%03d_2.pdf",final_position);
-        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_2_best.n_moves,&solution_2_best.positions[0],solution_2_elapsed_time,solution_2_count,"While");
+        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_2_best.n_moves,&solution_2_best.positions[0],solution_2_elapsed_time,solution_2_count,"Smart Recursion");
       }
       printf(" %3d %16lu %9.3e |",solution_2_best.n_moves,solution_2_count,solution_2_elapsed_time);
     }
@@ -368,7 +370,7 @@ int main(int argc,char *argv[argc + 1])
       if(print_this_one != 0)
       {
         sprintf(file_name,"%03d_3.pdf",final_position);
-        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_3_best.n_moves,&solution_3_best.positions[0],solution_3_elapsed_time,solution_3_count,"Plain recursion");
+        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_3_best.n_moves,&solution_3_best.positions[0],solution_3_elapsed_time,solution_3_count,"Smarter recursion");
       }
       printf(" %3d %16lu %9.3e |",solution_3_best.n_moves,solution_3_count,solution_3_elapsed_time);
     }
@@ -385,7 +387,7 @@ int main(int argc,char *argv[argc + 1])
       if(print_this_one != 0)
       {
         sprintf(file_name,"%03d_4.pdf",final_position);
-        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_4_best.n_moves,&solution_4_best.positions[0],solution_4_elapsed_time,solution_4_count,"Plain recursion");
+        make_custom_pdf_file(file_name,final_position,&max_road_speed[0],solution_4_best.n_moves,&solution_4_best.positions[0],solution_4_elapsed_time,solution_4_count,"Check Speed Limit");
       }
       printf(" %3d %16lu %9.3e |",solution_4_best.n_moves,solution_4_count,solution_4_elapsed_time);
     }
