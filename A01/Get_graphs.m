@@ -71,6 +71,14 @@ xlabel("Posição final")
 ylabel("Tempo de execução (s)")
 %% sol_3
 figure(3)
+plot(n2,efford_109018_3,"-o");
+hold on
+plot(n2,efford_105937_3,"-x")
+legend("109018","105937")
+title("Recursion 3-efford")
+xlabel("Posição final")
+ylabel("Efford")
+figure(32)
 plot(n2,times_109018_3,"-o");
 hold on
 plot(n2,times_105937_3,"-x")
