@@ -1,16 +1,8 @@
+%% load data
 load("table_values.mat")
 sol1_109018_t = readtable("sol1_55_109018.txt");
 sol1_105937_t = readtable("sol1_55_105937.txt");
-
-
-%escolhe a tabela que queres tabalhar testes109018 ou testes105938
-%%
-table109018 = testes109018;
-%%
-table = testes105937;
-%%
 n1 = [1:50, 55];
-nt = (1:1:100);
 n2 = table2array(testes109018(:,1));
 %% arrays sol_1
 n_moves_109018_1 = table2array(sol1_109018_t([1:51],3));
@@ -41,6 +33,15 @@ n_moves_105937_4 = table2array(testes105937(:,15));
 efford_105937_4 = table2array(testes105937(:,16));
 times_105937_4 = table2array(testes105937(:,17));
 %% sol_1
+figure(1)
+plot(n1,efford_109018_1,"-o");
+hold on
+plot(n1,efford_105937_1,"-x")
+legend("109018","105937")
+title("Recursion 1-efford")
+xlabel("Posição final")
+ylabel("Efford")
+figure(12)
 plot(n1,times_109018_1,"-o");
 hold on
 plot(n1,times_105937_1,"-x")
@@ -88,6 +89,14 @@ xlabel("Posição final")
 ylabel("Tempo de execução (s)")
 %% sol_4
 figure(4)
+plot(n2,efford_109018_4,"-o");
+hold on
+plot(n2,efford_105937_4,"-x")
+legend("109018","105937")
+title("Recursion 4-efford")
+xlabel("Posição final")
+ylabel("Efford")
+figure(42)
 plot(n2,times_109018_4,"-o");
 hold on
 plot(n2,times_105937_4,"-x")
