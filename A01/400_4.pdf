@@ -958,9 +958,15 @@ endobj
 7 0 obj
 << /Length 13756 >> stream
 BT 0 0 0 rg /MyFont 6.661 Tf
+<<<<<<< HEAD
+1 0 0 1 232.015 14.655 Tm (130 moves) Tj
+1 0 0 1 216.028 7.993 Tm (2.906e-06 seconds) Tj
+1 0 0 1 228.018 1.332 Tm (effort: 259) Tj
+=======
 1 0 0 1 232.015 14.655 Tm (128 moves) Tj
 1 0 0 1 216.028 7.993 Tm (9.391e-06 seconds) Tj
 1 0 0 1 228.018 1.332 Tm (effort: 255) Tj
+>>>>>>> 960ab6b640a9da06f7a16571144c5449d2b275c8
 1 0 0 1 220.025 253.339 Tm (Plain recursion) Tj
 1 0 0 1 222.023 246.678 Tm (road size: 400) Tj
 1 0 0 1 365.850 123.558 Tm (7) Tj

@@ -848,8 +848,13 @@ endobj
 << /Length 1970 >> stream
 BT 0 0 0 rg /MyFont 6.661 Tf
 1 0 0 1 234.013 14.655 Tm (17 moves) Tj
+<<<<<<< HEAD
+1 0 0 1 216.028 7.993 Tm (5.000e-07 seconds) Tj
+1 0 0 1 230.017 1.332 Tm (effort: 41) Tj
+=======
 1 0 0 1 216.028 7.993 Tm (2.521e-06 seconds) Tj
 1 0 0 1 230.017 1.332 Tm (effort: 33) Tj
+>>>>>>> 960ab6b640a9da06f7a16571144c5449d2b275c8
 1 0 0 1 240.008 253.339 Tm (While) Tj
 1 0 0 1 224.022 246.678 Tm (road size: 50) Tj
 1 0 0 1 365.850 123.558 Tm (7) Tj
